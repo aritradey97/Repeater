@@ -1,0 +1,10 @@
+token = abc
+op_io abc
+op_io abc
+op_a abc
+op_io abc abc
+op_lalp abc
+op_lalp abc abc abc
+op_ualp abc
+op_ualp abc abc abc
+rip
