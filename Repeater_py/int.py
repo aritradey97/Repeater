@@ -36,7 +36,11 @@ def generate_opcode(lines):
                 elif lines[i].find("op_lalp")!=-1:
                         opinit=96
                 elif lines[i].find("op_ualp")!=-1:
-                        opinit=64         
+                        opinit=64
+                elif lines[i].find("op_num")!=-1:
+                        opinit=48
+                elif lines[i].find("op_sp")!=-1:
+                        opinit = 200
                 arr=re.findall(regex, lines[i])
                 opcode.append(int(len(arr)+opinit))
         return opcode
@@ -85,7 +89,13 @@ def generate_operation():
                 elif opCodes[i] >= 97 and opCodes[i] <= 122:
                         print(chr(opCodes[i]),end = "")
                 elif opCodes[i] >= 65 and opCodes[i] <= 90:
-                        print(chr(opCodes[i]),end = "")        
+                        print(chr(opCodes[i]),end = "")
+                elif opCodes[i] >= 48 and opCodes[i] <= 57:
+                        print(chr(opCodes[i]),end="")
+                elif opCodes[i] == 201:
+                        print()
+                elif opCodes[i] == 202:
+                        print(" ",end="")
 print("Enter address of the file: ", end="")
 address=input()
 lines=generate_lines(address)
