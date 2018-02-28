@@ -35,7 +35,7 @@ bool icompare(string const& a, string const& b)
 int main()
 
 {
-	ifstream fin("/home/kiit/Payas/General/Koderunners.txt");
+	ifstream fin("Koderunners.txt");
 
 	cout<<"Enter String:\n";
 
